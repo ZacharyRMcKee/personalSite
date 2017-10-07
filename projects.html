@@ -14,7 +14,7 @@
 				<p>Teaching Assistant for CS 350</p>
 				<p>B.S. Computer Science -- Class of 2020</p>
 				<p>Illinois Institute of Technology</p>
-
+				<p><a href="resume4.pdf">Resume</a></p>
 			</div>
 		</header>
 		<nav>
@@ -35,8 +35,15 @@
 				</ul>
 
 			</nav>
-			<h2>Placeholder text</h2>
-			<p>To be filled in at a future time</p>
+			<h2>Huffman Code Text Encoder/Decoder</h2>
+			<p><a href="https://github.com/ZacharyRMcKee/Final-Spring17CS331">Source</a></p>
+			<h3>Description</h3>
+			<p>Text compression/decompression algorithm showcasing usage of trees, hash tables, object serialization, and algorithm design with performance in mind. What it does is take a text input consisting of ASCII characters, encodes it into a compressed file using the <a href="https://en.wikipedia.org/wiki/Huffman_coding">Huffman coding</a> algorithm, and then immediately takes that binary data and decodes it back into plaintext.</p>
+			<h3>Performance Analysis</h3>
+			<p>For the purposes of the assignment this project was developed for, this program is efficient enough. In order to analyze how well it performs with larger data sets, I went to the first large data set I could think of, which happened to be <a href="https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2">Chicago's reported crime data set.</a> I took progressively larger segments of this data, starting with relatively small samples (a few months' worth of data) and went up from there.</p>
+			<img src="algorithmcomplexity.png" alt="Graph of a linear big-O complexity algorithm.">
+			<p>Based off what this graph is telling us, we can conclude that the long-term complexity of this algorithm is &Omega;(n). This is desirable, however, as one can also see, the runtime for large data sets is suboptimal (around 24 minutes for 300MB of data), therefore there is a large constant factor.</p>
+			<p>Clearly, there is room for improvement. The above data does not show this, but the majority of the time spent is in the decoding portion of the program. The decoding portion uses a <strong>lot</strong> of recursive function calls in order to search the Huffman Tree as the program reads the encoded file. As function calls are relatively expensive, even in C (because a new item on the runtime stack has to be created, stack pointer updated, etc), a good way to approach optimizing this algorithm would be re-implementing the tree-search portion of the program in an iterative way.</p>
 		</section>
 		<footer>Zachary R. McKee &copy; 2017</footer>
 	</div>
