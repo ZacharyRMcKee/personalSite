@@ -26,25 +26,46 @@ nav ul {
 }
 nav {
 	clear: both;
+	text-align: center;
 }
 nav ul li {
 	float: left;
 }
-nav ul li a {
+#externalNav {
+	/*box-shadow: 0px 0px 10px black;*/
+	border-color: #4256a6;
+	border-radius: 5px;
+}
+#externalNav li a {
 	display: block;
 	color: white;
 	text-align: center;
 	padding: 5px 30px;
 	text-decoration: none;
-	border-right: 2px solid;
-	border-color: gray;
 }
-li a:hover {
+#externalNav li a:hover {
 
 	background-color: #444;
 }
 li a:active {
 	background-color: #555;
+}
+
+#currentPage {
+	background-color: #99adff;
+
+}#innerNav li a {
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 5px 30px;
+	text-decoration: none;
+}
+#innerNav li a:hover {
+	background-color: #b3c2ff;
+}
+nav #innerNav ul li a:active {
+	color: darkblue;
 }
 footer {
 	clear: both;
@@ -87,9 +108,12 @@ aside ul
 }
 #main {
 	background-color: #CCD6FF;
+	padding: 20px 50px 50px 50px;
 	display: block;
-	width: 783px;
+	width: 860px;
 	float: left;
+	box-shadow: 0px 0px 20px #3f425a;
+	border-radius: 5px;
 }
 #about {
 	float: left;
@@ -107,6 +131,18 @@ aside ul
 	margin: 5px 30px;
 	color: white;
 }
-#currentPage {
-	background-color: #A3A8BF;
+#innerNav {
+	margin: 0 auto;
+	display: inline-block;
 }
+#innerNav ul li a {
+	border: none;
+}
+nav #innerNav {
+	background-color: transparent;
+	border-radius: 5px;
+}
+#innerNav ul li a {
+	color: black;
+}
+
