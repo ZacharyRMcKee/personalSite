@@ -43,8 +43,26 @@
 			<h3>Performance Analysis</h3>
 			<p>For the purposes of the assignment this project was developed for, this program is efficient enough. In order to analyze how well it performs with larger data sets, I went to the first large data set I could think of, which happened to be <a href="https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2">Chicago's reported crime data set.</a> I took progressively larger segments of this data, starting with relatively small samples (a few months' worth of data) and went up from there.</p>
 			<img src="algorithmcomplexity.png" alt="Graph of a linear big-O complexity algorithm.">
-			<p>Based off what this graph is telling us, we can conclude that the long-term complexity of this algorithm is &Omega;(n). This is desirable, however, as one can also see, the runtime for large data sets is suboptimal (around 24 minutes for 300MB of data), therefore there is a large constant factor.</p>
-			<p>Clearly, there is room for improvement. The above data does not show this, but the majority of the time spent is in the decoding portion of the program. The decoding portion uses a <strong>lot</strong> of recursive function calls in order to search the Huffman Tree as the program reads the encoded file. As function calls are relatively expensive, even in C (because a new item on the runtime stack has to be created, stack pointer updated, etc), a good way to approach optimizing this algorithm would be re-implementing the tree-search portion of the program in an iterative way.</p>
+			<p>Based off what this graph is telling us, we can conclude that the long-term
+            complexity of this algorithm is &Theta;(n). This is desirable, however, as one can also
+            see, the runtime for large data sets is suboptimal (around 24 minutes for 300MB of data),
+            therefore there is a large constant factor.</p>
+			<p>Clearly, there is room for improvement. The above data does not show this, but the majority
+            of the time spent is in the decoding portion of the program.The decoding portion uses a
+            <strong>lot</strong> of recursive function calls in order to search the Huffman Tree as
+            the program reads the encoded file.</p>
+            <p>As function calls are relatively expensive, even in 
+            C (because a new item on the runtime stack has to be created, stack pointer updated, etc), a good
+            way to approach optimizing this algorithm would be re-implementing the tree-search portion of 
+            the program in an iterative way. That way we're not asking the CPU to do all the miscellaneous tasks
+            that are required to call a new Python function.</p>
+            <p>Another thing that we want to be able to take advantage of when designing algorithms is the
+            way the CPU is physically implemented. Unless Python is doing something truly amazing behind the scenes
+            that I am not aware of, when we use a recursive implementation of tree searches, it's less likely
+            for the data that we care about to be already stored in the cache when we request it
+            (as the data is stored in a stack that potentially contains upwards of 10-20 seperate function calls,
+            versus an iterative notation where we just have a pointer that gets changed as it goes down the tree).</p>
+
 		</section>
 		<footer>Zachary R. McKee &copy; 2017</footer>
 	</div>
