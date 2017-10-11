@@ -51,13 +51,16 @@
             therefore there is a large constant factor.</p>
 			<figure>
 				<img src="profile.png" alt="Flame graph of Huffman Code Text Encoder/Decoder.">
-				<figcaption>A flame graph of my program, showing the expense of decoding.</figcaption>
+				<figcaption>A <a href="www.brendangregg.com/flamegraphs.html">flame graph</a> of my program, showing the expense of decoding.</figcaption>
 			</figure>
-
+			<p>The two main portions of the program are called at line 21 of main.py (encoding)
+			 and line 26 of main.py (decoding), which can be seen in the graph above, which displays
+			 the stack frame of the program through its execution.</p>
 			<p>Clearly, there is room for improvement. As can be seen above, the majority
             of the time spent is in the decoding portion of the program. The decoding portion uses a
             <strong>lot</strong> of recursive function calls in order to search the Huffman Tree as
-            the program reads the encoded file.</p>
+            the program reads the encoded file. You can actually see the general shape of this recursion
+			above, as new calls to traverseTree are pushed and popped to and from the stack.</p>
             <p>As function calls are relatively expensive, even in 
             C (because a new item on the runtime stack has to be created, stack pointer updated, etc), a good
             way to approach optimizing this algorithm would be re-implementing the tree-search portion of 
