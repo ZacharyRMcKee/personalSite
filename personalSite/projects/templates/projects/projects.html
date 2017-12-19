@@ -39,7 +39,7 @@
 		{% for project in project_list %}
 			<h2><a href="{% url 'project:detail' project.id %}">{{project.name }}</a></h2>
 			<p><a href="{{ project.source }}">Source</a></p>
-			<p>{{ project.getSummary }}</p>
+			<p>{{ project.summary }}</p>
 		{% endfor %}
 		</ul>
 	{% else %}
