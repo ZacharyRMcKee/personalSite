@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'home',
     'projects',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -69,6 +70,13 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'personalSite.wsgi.application'
+
+
+
+STATICFILES_DIRS = (
+	'personalSite/static',
+)
+
 
 
 # Database
