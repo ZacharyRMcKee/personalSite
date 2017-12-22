@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '7-s7za2k4qr#6+wm-zn%3wdk6kqc0rqxzq#gm9ge84m(5i@)o3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True 
 
 ALLOWED_HOSTS = []
 
@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'personalSite',
     'home',
     'projects',
     'django.contrib.admin',
@@ -70,7 +71,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'personalSite.wsgi.application'
-
 
 
 STATICFILES_DIRS = (

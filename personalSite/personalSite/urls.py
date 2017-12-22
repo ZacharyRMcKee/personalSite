@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from django.shortcuts import redirect
+from .views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('projects/',include('projects.urls')),
-    #path('home/',include('home.urls')),
-    path('',redirect('home/')),
+    path('projects/',include('projects.urls'),name='project'),
+    path('home/',include('home.urls'),name='home'),
+    path('',homeRedirect),
 ]
