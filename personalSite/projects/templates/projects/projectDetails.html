@@ -34,15 +34,15 @@
 					<li><a id="currentPage" href="{% url 'project:list' %}">Projects</a></li>
 				</ul>
 			</nav>
-	{% if project_list %}
-		{% for project in project_list %}
+			<a href="{% url 'project:list' %}">Back to Project List</a>
 			<h2>{{ project.name }}</h2>
-			<p><a href="{{ project.source }}">Source</a>, <a href={% url 'project:detail' project.id %}>Details</a></p>
 			<p>{{ project.summary }}</p>
-		{% endfor %}
-	{% else %}
-		<p>No projects are available.</p>
-	{% endif %}
+			<br/>
+			{% if project.contents %}
+				<p>{{project.contents}}</p>
+			{% else %}
+				<p>No detailed description available.</p>
+			{% endif %}
 		</section>
 		<footer>Zachary R. McKee &copy; 2017</footer>
 	</div>

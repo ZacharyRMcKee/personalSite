@@ -16,4 +16,7 @@ class ProjectDetailView(generic.DetailView):
 	template_name = 'projects/projectDetails.html'
 	def get_queryset(self):
 		return Project.objects.order_by('-id').all()
+class HomeView(generic.TemplateView):
+	template_name = 'home/home.html'
 
+	
