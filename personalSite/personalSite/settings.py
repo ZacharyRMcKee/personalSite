@@ -31,13 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 
-STATIC_ROOT = '/var/www/personalSite/static/'
+STATIC_ROOT = '/home/zmckee/Projects/personalSite/personalSite/static/'
 STATIC_URL = '/static/'
 
 
 INSTALLED_APPS = [
     'personalSite',
     'home',
+    'teaching',
     'projects',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -89,9 +90,9 @@ STATICFILES_DIRS = (
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mydb',
-	'USER': 'postgres',
+       	'ENGINE': 'django.db.backends.postgresql',
+       	'NAME': 'mydb',
+ 	'USER': 'postgres',
 	'PASSWORD': 'Britt630',
 	'HOST': '127.0.0.1',
 	'PORT': '5432',

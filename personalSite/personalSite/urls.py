@@ -17,9 +17,12 @@ from django.contrib import admin
 from django.urls import include, path
 from django.shortcuts import redirect
 from .views import *
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('projects/',include('projects.urls'),name='project'),
     path('home/',include('home.urls'),name='home'),
+    path('teaching/',include('teaching.urls'),name='teaching'),
     path('',homeRedirect),
 ]
+urlpatterns += staticfiles_urlpatterns()
