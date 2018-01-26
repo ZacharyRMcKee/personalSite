@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '7-s7za2k4qr#6+wm-zn%3wdk6kqc0rqxzq#gm9ge84m(5i@)o3'
+SECRET_KEY = '7a-s7za2k4qr#6+wm-zn%3wdk6kqc0rqxzq#gm9ge84m(5i@)o3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True 
@@ -31,13 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 
-STATIC_ROOT = '/var/www/personalSite/static/'
+STATIC_ROOT = '/home/zmckee/Projects/personalSite/personalSite/static/'
 STATIC_URL = '/static/'
 
 
 INSTALLED_APPS = [
     'personalSite',
     'home',
+    'teaching',
     'projects',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -89,9 +90,9 @@ STATICFILES_DIRS = (
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mydb',
-	'USER': 'postgres',
+       	'ENGINE': 'django.db.backends.postgresql',
+       	'NAME': 'mydb',
+ 	'USER': 'postgres',
 	'PASSWORD': 'Britt630',
 	'HOST': '127.0.0.1',
 	'PORT': '5432',

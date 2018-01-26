@@ -4,7 +4,7 @@
 {% block innerNav %}
 
 	<li><a href="{% url 'home:home' %}">Home</a></li>
-	<li><a href="">Teaching</a></li>
+	<li><a href="{% url 'teaching:teaching' %}">Teaching</a></li>
 	<li><a id="currentPage" href="{% url 'project:list' %}">Projects</a></li>
 {% endblock %}
 
