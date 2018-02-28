@@ -23,29 +23,29 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ['DJANGOSECRETKEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True 
+DEBUG = False 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.zacharyrmckee.com','zacharyrmckee.com','test.zacharyrmckee.com','localhost','18.217.186.47']
 
 
 # Application definition
 
 
-STATIC_ROOT = '/home/zmckee/Projects/personalSite/personalSite/static/'
+STATIC_ROOT = '/www/personalSite/personalSite/personalSite/'
 STATIC_URL = '/static/'
 
 
 INSTALLED_APPS = [
-    'personalSite',
-    'home',
-    'teaching',
-    'projects',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'personalSite',
+    'home',
+    'teaching',
+    'projects',
 ]
 
 MIDDLEWARE = [
