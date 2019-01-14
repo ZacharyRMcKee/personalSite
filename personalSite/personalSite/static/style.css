@@ -1,0 +1,159 @@
+body {
+	background-color: #e5e8f5;
+}
+h1 {
+	color: #4256a6;
+	font-size: 50px;
+	float: left;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-right: 20px;
+	border-right: 2px solid black;
+	display: block;
+	font-weight: bold
+}
+h2, h3 {
+	color: #4256a6;
+}
+p {
+	color: #444;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0px 0px 5px 0px;
+	padding: 0;
+	overflow: hidden;
+	background-color: #3F425A;
+}
+nav {
+	clear: both;
+	text-align: center;
+}
+nav ul li {
+	float: left;
+}
+figure {
+	text-align: center;
+}
+#externalNav {
+	/*box-shadow: 0px 0px 10px black;*/
+	border-color: #4256a6;
+	border-radius: 5px;
+}
+#externalNav li a {
+	font-weight: normal;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 5px 30px;
+	text-decoration: none;
+}
+#externalNav li a:hover {
+
+	background-color: #444;
+}
+li a:active {
+	background-color: #555;
+}
+
+#currentPage {
+	background-color: #cdd6fd;
+
+}#innerNav li a {
+	font-weight: normal;
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 5px 30px;
+	text-decoration: none;
+}
+#innerNav li a:hover {
+	background-color: #c3cffd;
+}
+nav #innerNav ul li a:active {
+	color: darkblue;
+}
+footer {
+	clear: both;
+	padding-top:20px;
+	text-align: center;
+}
+section {
+	background-color: white;
+	padding: 10px;
+	 
+}
+aside {
+	width: 148px;
+	float: left;
+	padding: 0px;
+	margin-right: 5px;
+	background-color: #3F425A;
+	border-right: 4px solid;
+	border-color: #A3A8BF;
+}
+aside ul li a {
+	display: block;
+	color: white;
+	text-decoration: none;
+	width: 100%;
+}
+aside ul
+{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+
+}
+#wrapper {
+	display: block;
+	width: 960px;
+	margin: 20px auto;
+	font-family: Roboto,Ubuntu,helvetica,sans-serif;
+}
+#main {
+	background-color: #f1f3f9;
+	padding: 20px 50px 50px 50px;
+	display: block;
+	width: 860px;
+	float: left;
+	box-shadow: 0px 0px 5px #9d9faf;
+	border-radius: 5px;
+}
+#about {
+	float: left;
+	margin-top: 30px;
+}
+a { color: #4256a6; }
+a:hover { color: #4256a6; font-weight: bold; }
+
+
+
+
+#about p {
+	margin: 5px;
+	margin-left: 20px;
+}
+#spacer {
+	display: block;
+	height: 15px;
+}
+#email {
+	margin: 5px 30px;
+	color: white;
+}
+#innerNav {
+	margin: 0 auto;
+	display: inline-block;
+}
+#innerNav ul li a {
+	border: none;
+}
+nav #innerNav {
+	background-color: transparent;
+	border-radius: 5px;
+}
+#innerNav ul li a {
+	color: black;
+}

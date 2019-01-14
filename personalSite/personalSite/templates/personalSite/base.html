@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+	{% load static %}
+	<link rel="shortcut icon" type="image/png"  href="{% static 'favicon.png' %}?v=2">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+	<title>Zachary R. McKee</title>
+	<meta name="google-site-verification" content="pp0_6fKJa7Gs2xg0nmbkSdIT08wj2tt52_morAUTpn8" />
+	<meta name="google-site-verification" content="SK7i3ZrFP1V8ielOV_dF5hA_YCZmNRzj4DOSWxgiqms" />
+</head>
+<body>
+	<div id="wrapper">
+			
+		<header>
+			<h1>Zachary R. McKee</h1>
+			<div id="about">
+				<p>Former Teaching Assistant at Illinois Tech</p>
+				<p>B.S. Computer Science -- 2020</p>
+				<p>McCormick School of Engineering</p>
+				<p>Northwestern University</p>
+				<p><!-- Illinois Institute of Technology --></p>
+				{% load static %}
+				<p><a href="{% static 'resume13.pdf' %}">Resume</a></p>
+
+			</div>
+		</header>
+		<nav>
+			<ul id="externalNav">
+				<li><a target= "_blank" href="https://www.linkedin.com/in/zacharyrmckee/">LinkedIn</a></li>
+				<li><a target= "_blank" href="https://github.com/ZacharyRMcKee">GitHub</a></li>
+				<li><a target= "_blank" href="https://devpost.com/ZacharyMcKee">Devpost</a></li>
+				<li><p id="email">Email: zmckee@u.northwestern.edu</p></li>
+			</ul>
+		</nav>
+		<div id="spacer"></div>
+		<section id="main">
+			<nav>
+				<ul id="innerNav">
+					{% block innerNav %}
+					<li><a href="{% url 'home:home' %}">Home</a></li>
+					<li><a href="teaching.html">Teaching</a></li>
+					<li><a href="{% url 'project:list' %}">Projects</a></li>
+					{% endblock %}
+				</ul>
+
+			</nav>
+
+			{% block content %}
+			{% endblock %}
+		</section>
+		<footer>Zachary R. McKee &copy; 2017-2018</footer>
+	</div>
+</body>
+</html>

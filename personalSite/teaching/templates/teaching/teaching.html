@@ -1,0 +1,18 @@
+{% extends "personalSite/base.html" %}
+{% block innerNav %}
+	<li><a href="{% url 'home:home' %}">Home</a></li>
+        <li><a id="currentPage" href="{% url 'teaching:teaching' %}">Teaching</a></li>
+        <li><a href="{% url 'project:list' %}">Projects</a></li>
+{% endblock %}
+
+{% block content %}
+	
+	<p>Here is a list of courses i've worked for as a TA in the past.</p>
+	<h2>Illinois Institute of Technology</h2>
+	<hr/>
+	<h3>CS 350 -- Spring 2018</h3>
+	<h4>Taught by <a href="http://halek.co">Kyle C. Hale</a></h4>
+	<h3>CS 350 -- Fall 2017</h3>
+	<h4>Taught by <a href="http://www.cs.iit.edu/~sasaki/">Jim Sasaki</a></h4>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'personalSite/base.html' %}
+
+{% block innerNav %}
+
+	<li><a href="{% url 'home:home' %}">Home</a></li>
+	<li><a href="{% url 'teaching:teaching' %}">Teaching</a></li>
+	<li><a href="" id="currentPage">Projects</a></li>
+{% endblock %}
+{% block content %}
+	<h2>{{ project.name }}</h2>
+	<p><a target= "_blank" href="{{ project.source}}">Source</a> | <a href="{% url 'project:list' %}">Back to Project List</a>
+	<h3>Description</h3>
+	<p>{{ project.summary|safe }}</p>
+	{% if project.contents %}
+		{{ project.contents|safe }}
+	{% else %}
+		<p>No detailed description available.</p>
+	{% endif %}
+{% endblock %}
