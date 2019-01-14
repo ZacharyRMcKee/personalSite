@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'home',
     'teaching',
     'projects',
+    'sandbox1',
 ]
 
 MIDDLEWARE = [

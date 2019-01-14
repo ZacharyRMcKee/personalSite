@@ -24,6 +24,7 @@ urlpatterns = [
     path('projects/',include('projects.urls'),name='project'),
     path('home/',include('home.urls'),name='home'),
     path('teaching/',include('teaching.urls'),name='teaching'),
+    path('sandbox-1/',include('sandbox-1.urls'),name='sandbox-1'),
     path('',homeRedirect),
 ]
 
